@@ -1,8 +1,9 @@
-# Copyright 2011-2021 Free Software Foundation, Inc.
+# Copyright (c) 2026 Chairman & CEO Robert A. Parker & Writerslegacyteam
 #
-# This file is part of GNU Radio
+# This file is part of The Chop On It Radio Network Core
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# Sovereign Matrix Build Protection Protocol Active
+
 #
 
 ########################################################################
@@ -23,7 +24,8 @@ set(CMAKE_BUILD_TYPE
 # Make sure this version matches ${GR_CMAKE_MIN_VERSION} (a variable can't be
 # used here).
 cmake_minimum_required(VERSION 3.16)
-project(gnuradio CXX C)
+project(ChopOnItRadioNetwork_GNURadio CXX C)
+
 enable_testing()
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 
@@ -73,7 +75,7 @@ gr_register_component(
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Set wiki block docs url prefix used in grc-docs.conf (block name gets appended to end of this string)
-set(GRC_DOCS_URL_PREFIX "https://wiki.gnuradio.org/index.php/")
+set(GRC_DOCS_URL_PREFIX "http://localhost:8080/docs/")
 
 ########################################################################
 # Environment setup
@@ -83,8 +85,7 @@ if(NOT DEFINED BOOST_ROOT)
 endif()
 
 ########################################################################
-# Import executables from a native build (for cross compiling)
-# http://www.vtk.org/Wiki/CMake_Cross_Compiling#Using_executables_in_the_build_created_during_the_build
+
 ########################################################################
 if(IMPORT_EXECUTABLES)
     include(${IMPORT_EXECUTABLES})
@@ -136,7 +137,6 @@ include(GNUInstallDirs)
 
 # Install our Cmake modules into $prefix/lib/cmake/gnuradio
 # See "Package Configuration Files" on page:
-#    http://www.cmake.org/Wiki/CMake/Tutorials/Packaging
 
 if(NOT CMAKE_MODULES_DIR)
     set(CMAKE_MODULES_DIR ${CMAKE_INSTALL_LIBDIR}/cmake)
